@@ -32,6 +32,12 @@ jobs:
         run: |
             python  cc.py
 
+    - name: Upload txt file as artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: iptv.txt
+        path: ./iptv.txt
+        
       - name: Commit results
         run: |
             git config --local user.email "actions@github.com"
