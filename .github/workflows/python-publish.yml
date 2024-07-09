@@ -28,14 +28,14 @@ jobs:
     - name: Run Python Script
       run: python cc.py
 
-    - name: 提交更改
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        #git reset --hard origin/main
-        git add .
-        git commit -m "Add generated file"
-        #git commit *.txt -m "Add generated file"
-        #git commit *.m3u -m "Add generated file"
-        #git pull --rebase
-        git push -f
+      - name: Commit results
+        run: |
+            git config --local user.email "actions@github.com"
+            git config --local user.name "GitHub Action"
+            if [ -n "$(git status --porcelain)" ]; then
+            git add  *.txt #*.m3u
+            git commit -am "Automatic update"
+            git push
+            else
+              echo "No changes detected, skipping commit."
+            fi
