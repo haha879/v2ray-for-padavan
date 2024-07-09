@@ -30,7 +30,7 @@ jobs:
 
       - name: Run Update IPTV
         run: |
-            python  iptv.py
+            python  cc.py
 
       - name: Git Auto Commit
         uses: stefanzweifel/git-auto-commit-action@v5
