@@ -7,7 +7,7 @@ on:
     - cron: "0 * * * *"
 
 jobs:
-  iptv:
+  build:
     runs-on: ubuntu-latest
 
     permissions: write-all
