@@ -31,9 +31,9 @@ jobs:
         run: pip install translate requests 
         
       - name: Run iptv
-         run: |
+        run: |
              python ${{ github.workspace }}/py/cc.py
-        #     python ${{ github.workspace }}/py/hebing.py
+             python ${{ github.workspace }}/py/hebing.py
          
       - name: Commit results
         run: |
