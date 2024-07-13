@@ -6,7 +6,7 @@ filedir = 'output'
 #获取当前文件夹中的文件名称列表  
 filenames=os.listdir(filedir)
 #打开当前目录下的result.txt文件，如果没有则创建
-f=open('result2.txt','w')
+f=open('iptv.txt','w')
 #先遍历文件名
 for filename in filenames:
     filepath = filedir+'/'+filename
